@@ -21,7 +21,11 @@ export default function Card({ gist }: { gist: Gist }) {
           </h3>
         </Link>
         <p className="text-[#8B949E] text-sm mb-4">{firstFileName}</p>
+        <p className="text-[#8B949E] text-xs mb-4 ">
+            Updated on {new Date(gist.updated_at).toLocaleDateString()}
+          </p>
         <div className="flex gap-3">
+
           <Link
             to={`/gist/${gist.id}`}
             className="text-[#58A6FF] text-sm hover:underline flex-1"
